@@ -1,0 +1,41 @@
+@mixin simplified-block {
+  width: 70px; height: 70px;
+}   
+
+@mixin simplified-circle {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+}
+
+$block--blue__block__backgroundcolor: #0097C0;
+$block--blue__circle__backgroundcolor: #ff9700;
+$block--blue--reversed__block__backgroundcolor: #ff9700;
+$block--blue--reversed__circle__backgroundcolor: #0097C0;
+
+.block--blue {
+  &__block {
+  background: $block--blue__block__backgroundcolor;
+  position: absolute; top: 10px; left: 40px;
+  @include simplified-block;
+}
+
+  &__circle {
+  background: $block--blue__circle__backgroundcolor;
+  position: absolute; top: 20px; left: 50px;
+  @include simplified-circle;
+}
+}
+
+.block--blue--reversed {
+  &__block {
+  background: $block--blue--reversed__block__backgroundcolor;
+  position: absolute; top: 290px; left: 40px;
+  @include simplified-block;
+}
+
+  &__circle {
+  background: $block--blue--reversed__circle__backgroundcolor;
+  position: absolute; top: 300px; left: 50px;
+  @include simplified-circle;
+}
+}
